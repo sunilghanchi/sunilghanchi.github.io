@@ -1,649 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>Sunil Ghanchi Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-<style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #87CEEB;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Sunil Ghanchi</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Sunil Ghanchi</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'Tech Enthusiast  ',
-						'Vlogger   ', 	
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>An AI-ML Engineer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.youtube.com/@sunilghanchi3154" class="btn btn-primary py-3 px-4">YouTube</a> 
-							<a href="https://github.com/sunilghanchi" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Sunil Ghanchi</span></p>
-										<p><span class="title-s">Job Role: </span> <span>AI-ML Engineer</span></p>
-										<p><span class="title-s">Experience: </span> <span>11 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Ahmedabad, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>Python</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning-Deep Learning</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>NLP-LLMs</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Analysis</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With 11 months of experience in data science and analytics, complemented by a Bachelor's degree in Computer Engineering.   
-									Proficient in data analysis, machine learning, statistical modeling, and &amp; data visualization. 
-									Demonstrated success in contributing to impactful projects and collaborating, effectively with cross-functional teams.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>AI, ML &amp; Data Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, Healthcare, BFSI &amp; Digital Marketing</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>ML Libraries:</span> <span>TensorFlow, PyTorch, Scikit-learn, Keras, Hugging Face Transformers, Apache Spark MLlib &amp; OpenCV</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Prompting, Cloud, PySpark, Excel &amp; Git</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Trekking &amp; Vlogging</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="10">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/sunil-ghanchi-07b0471b5" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Emerging AI/ML Specialist with 11 months of hands-on experience in developing and deploying machine learning models. Proficient in data analysis, statistical modeling, deep learning algorithms, and AI-driven solutions. Demonstrated ability to contribute to impactful AI/ML projects and collaborate effectively with cross-functional teams.</p>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100f">
+  <meta name="description" content="Sunil Ghanchi is a Software Engineer building production AI systems across agentic workflows, document intelligence, backend systems, and applied AI.">
+  <meta property="og:title" content="Sunil Ghanchi — AI Systems Engineer"><meta property="og:description" content="Production AI systems, from architecture to deployment."><meta property="og:type" content="website">
+  <title>Sunil Ghanchi — AI Systems Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a><div class="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Sunil Ghanchi, back to top"><span class="brand-mark">SG</span><span class="brand-name">Sunil Ghanchi</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#about">About</a></nav>
+    <a class="header-cta" href="mailto:sunilghanchi24@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" aria-hidden="true"><nav aria-label="Mobile navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div>
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy reveal"><p class="eyebrow"><span class="pulse-dot"></span> Software Engineer · AI/ML</p><h1 id="hero-title">Building production<br><em>AI systems.</em></h1><p class="hero-summary">I take AI product ideas from architecture to reliable software—combining agent workflows, backend engineering, infrastructure, and deployment.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#work">Explore selected work <span>↓</span></a><a class="button button-quiet" href="mailto:sunilghanchi24@gmail.com?subject=Resume%20request">Request résumé <span>↗</span></a></div>
+          <ul class="hero-fields" aria-label="Areas of expertise"><li>Agentic AI</li><li>RAG</li><li>AI Automation</li><li>Computer Vision</li><li>Speech AI</li></ul>
         </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Jan 2024-Present</span>
-						<h2>AI ML Engineer</h2>
-						<span class="position">Linearloop</span>
-						<p class="mt-4">Linearloop: premier software & digital transformation company with a global team, delivering innovative, human-centric solutions 
-							<ul>
-								<li>Enhanced bug tracking software with AI capabilities to generate steps to reproduce in seconds, streamlining issue resolution.</li>
-								<li>Implemented AI debugger in bug tracking software, offering real-time suggestions to resolve bugs efficiently.</li>
-								<!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">July 2023 - Oct 2023</span>
-						<h2>Data Science Intern</h2>
-						<span class="position">Honeybee Digital</span>
-						<p class="mt-4">Honeybee Digital is a data-centric digital marketing agency, partnering with industry leaders to drive transformative digital strategies. 
-							<ul>
-								<li>Leveraged comprehensive web scraping to gather marketing data from online sources, optimizing insights for decision-making.</li>
-								<li>Implemented robust data cleaning procedures and managed large datasets for website maintenance and optimization.</li>
-								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">July 2023 - July 2023</span>
-						<h2>Data Science & Machine Learning Intern</h2>
-						<span class="position">BrainyBeam Info-Tech Pvt Ltd</span>
-						<p class="mt-4">BrainyBeam Infotech is a data-driven analytics and solutions provider, empowering top brands worldwide. 
-							<ul>
-								<li>Mastered machine learning algorithms and techniques for predictive modeling and data analysis.</li>
-								<li>Enhanced skills in statistical analysis and data visualization for extracting actionable insights.</li>
-								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2020-2024</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Gujarat Technological University</span>
-    					<p class="mt-4">Grade: First class distinction</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2018-2020</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">IP English School</span>
-    					<p class="mt-4">Grade: Second class</p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1xMUto8KfI1rMTfhvAC2ArZ7VSn1N_z6j/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Machine Learning, Data Analytics projects on Python, ML & Power BI.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/sunilghanchi/ghumkkad_ai/blob/main/Website%20Main/app.py" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/sunilghanchi/ghumkkad_ai/blob/main/Website%20Main/app.py">Ghumkkad AI - A Travel Recommendation System</a></h3>
-                <p>Developed three systems, utilizing machine learning algorithms to personalize travel suggestions and enhance user experience.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/sunilghanchi/Automatic-Attendence-System-Using-Facial-Recognition/blob/main/login.py" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/sunilghanchi/Automatic-Attendence-System-Using-Facial-Recognition/blob/main/login.py">Automatic Attendance System using Facial Recognition</a></h3>
-                <p>Utilized facial recognition and machine learning techniques to streamline attendance tracking.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/sunilghanchi/stock-market-price-prediction-lstms/blob/main/stock_market_prediction.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/sunilghanchi/stock-market-price-prediction-lstms/blob/main/stock_market_prediction.ipynb">Stock Market Price - LSTMs Forecasting</a></h3>
-                <p>Developed LSTMs for stock market price prediction, enhancing investment strategies.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/sunilghanchi/IPL2023-Data-Analysis/blob/main/ProjectPPT.pdf" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/sunilghanchi/IPL2023-Data-Analysis/blob/main/ProjectPPT.pdf">IPL-2023 Data Analysis</a></h3>
-				  <p>Conducted comprehensive IPL-2023 data analysis and formulate an unbeatable playing 11 team.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/sunilghanchi/cat_dog_classification/blob/main/cat_vs_dog_classification.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/sunilghanchi/cat_dog_classification/blob/main/cat_vs_dog_classification.ipynb">Image Classification using Convolutional Neural Network</a></h3>
-				  <p>Implemented Convolutional Neural Network for image classification, distinguishing between cat &amp; dog images.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="365">0</strong>
-                <span>Learning Days</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="100">0</strong>
-                <span>LLMs Tried</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="hero-portrait reveal" data-delay="1"><canvas id="systems-canvas" aria-label="Animated AI orchestration graph"></canvas><div class="portrait-status"><span>Current focus</span><strong>Agentic AI · RAG · Automation</strong></div><img src="images/sunil-professional-cutout.png" alt="Sunil Ghanchi in a navy suit" width="1023" height="1458"></div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/sunilghanchi" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+      <div class="hero-rail" aria-hidden="true"><span>Architecture</span><i></i><span>Intelligence</span><i></i><span>Infrastructure</span><i></i><span>Delivery</span></div>
+    </section>
 
+    <section class="build section-shell" id="capabilities" aria-labelledby="build-title">
+      <div class="section-heading reveal"><p class="section-index">01 / Capabilities</p><h2 id="build-title">Systems over<br><em>spectacle.</em></h2><p>I work at the intersection of AI models, backend engineering, product requirements, and production infrastructure.</p></div>
+      <div class="capability-grid">
+        <article class="capability-card reveal"><span class="card-number">01</span><div class="mini-system agents" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Agentic AI Systems</h3><p>Supervisor-worker orchestration, tool calling, sub-agent delegation, streaming, retries, and checkpointing.</p><div class="tags"><span>LangGraph</span><span>LLMs</span><span>Tool calling</span></div></article>
+        <article class="capability-card reveal" data-delay="1"><span class="card-number">02</span><div class="mini-system retrieval" aria-hidden="true"><i></i><i></i><i></i><b></b></div><h3>RAG & Document Intelligence</h3><p>Ingestion, embeddings, contextual retrieval, structured extraction, validation, and evidence-grounded generation.</p><div class="tags"><span>Qdrant</span><span>OCR</span><span>Vector search</span></div></article>
+        <article class="capability-card reveal" data-delay="2"><span class="card-number">03</span><div class="mini-system vision" aria-hidden="true"><i></i><i></i><b></b></div><h3>Applied AI</h3><p>Real-time computer vision, speech intelligence, recommendation workflows, and optimized edge inference.</p><div class="tags"><span>YOLO</span><span>Whisper</span><span>TFLite</span></div></article>
+        <article class="capability-card reveal" data-delay="3"><span class="card-number">04</span><div class="mini-system backend" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>AI Product Engineering</h3><p>Production APIs, asynchronous workflows, data systems, object storage, containers, and cloud deployment.</p><div class="tags"><span>FastAPI</span><span>Django</span><span>AWS</span></div></article>
+      </div>
+    </section>
 
+    <section class="work section-shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading horizontal reveal"><div><p class="section-index">02 / Selected work</p><h2 id="work-title">Built for the<br><em>real world.</em></h2></div><p>Selected production systems where the hard part was connecting intelligence to reliable workflows.</p></div>
+      <div class="project-list">
+        <article class="project project-featured reveal"><div class="project-top"><span class="project-id">01 / Agentic systems</span><span class="project-state"><i></i> In development</span></div><div class="project-layout"><div class="project-copy"><h3>Production AI<br>Orchestration Platform</h3><p>Building a supervisor-worker platform that turns complex requests into coordinated agent execution across tools, models, and long-running workflows.</p><dl><div><dt>System</dt><dd>Parallel and sequential execution, sub-agent delegation, streaming updates, retry handling, and persistent checkpoints.</dd></div><div><dt>Ownership</dt><dd>AI workflow architecture, FastAPI services, provider integrations, usage tracking, and production failure handling.</dd></div></dl><div class="tags"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>PostgreSQL</span><span>Qdrant</span><span>Redis / Valkey</span><span>MinIO</span><span>Docker</span></div></div><figure class="project-image"><img src="images/project-agentic.webp" alt="Agent orchestration system connecting a supervisor with specialized workers and tools" width="1536" height="1024" loading="lazy"></figure></div></article>
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
+        <article class="project reveal"><div class="project-top"><span class="project-id">02 / Logistics · Accounting</span><span class="project-state">Document intelligence</span></div><div class="project-layout"><div class="project-copy"><h3>AI Document Processing<br>& Invoice Automation</h3><p>Built document pipelines that transform unstructured invoices and business files into validated data and downstream actions.</p><dl><div><dt>System</dt><dd>Upload → separation → classification → OCR and extraction → verification → secure storage → ERP or CRM routing → notification.</dd></div><div><dt>Ownership</dt><dd>Document classification and extraction, OCR and LLM workflows, human review, scalable backend services, and integrations.</dd></div></dl><div class="tags"><span>Python</span><span>LangChain</span><span>GPT-4o</span><span>Tesseract</span><span>Azure DI</span><span>AWS ECS</span><span>PostgreSQL</span></div></div><figure class="project-image"><img src="images/project-document-intelligence.webp" alt="Freight invoice moving through classification, extraction, validation, review, and ERP integration" width="1536" height="1024" loading="lazy"></figure></div></article>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Ahmedabad, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center"><a href="tel://+919624076783">
-          			<span class="icon-phone2"></span></a>
-          		</div><a href="tel://+919624076783">
-          		<h3 class="mb-4">Contact Number</h3></a>
-	            <p><a href="tel://+919624076783">+91 96240 76783</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center"><a href="mailto:sunilghanchi24@gmail.com">
-          			<span class="icon-paper-plane"></span></a>
-          		</div><a href="mailto:sunilghanchi24@gmail.com">
-          		<h3 class="mb-4">Email Address</h3></a>
-	            <p><a href="mailto:sunilghanchi24@gmail.com">sunilghanchi24@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center"><a href="https://drive.google.com/file/d/1xMUto8KfI1rMTfhvAC2ArZ7VSn1N_z6j/view?usp=sharing">
-          			<span class="icon-globe"></span></a>
-          		</div><a href="https://drive.google.com/file/d/1xMUto8KfI1rMTfhvAC2ArZ7VSn1N_z6j/view?usp=sharing">
-          		<h3 class="mb-4">Download Resume</h3></a>
-	            <p><a href="https://drive.google.com/file/d/1xMUto8KfI1rMTfhvAC2ArZ7VSn1N_z6j/view?usp=sharing">Resume</a></p>
-	          </div>
-          </div>
+        <div class="project-pair"><article class="project compact reveal"><div class="project-top"><span class="project-id">03 / Developer productivity</span></div><figure class="project-image compact-image"><img src="images/project-betterbugs.webp" alt="AI bug analysis workflow connecting an issue, code context, tools, retrieval, and resolution" width="1536" height="1024" loading="lazy"></figure><h3>BetterBugs AI</h3><p>AI capabilities for bug reproduction, contextual analysis, and resolution assistance inside an intelligent developer platform.</p><div class="ownership"><span>Owned</span>Django backend, MCP and OAuth integrations, LLM workflows, and vector database integration.</div><div class="tags"><span>Django</span><span>MCP</span><span>OAuth</span><span>ChromaDB</span><span>PostgreSQL</span></div></article><article class="project compact reveal" data-delay="1"><div class="project-top"><span class="project-id">04 / Sales automation</span></div><figure class="project-image compact-image"><img src="images/project-ai-calling.webp" alt="Voice automation workflow connecting outreach, scheduling, email follow-up, and campaign processing" width="1536" height="1024" loading="lazy"></figure><h3>AI Calling System</h3><p>Automated outbound calling and follow-up workflows connecting conversational AI to practical campaign operations.</p><div class="ownership"><span>Owned</span>Calling workflows, STT/TTS integration, email verification, meeting scheduling, and bulk CSV processing.</div><div class="tags"><span>Python</span><span>Django</span><span>STT / TTS</span><span>LLMs</span><span>PostgreSQL</span></div></article></div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/fxzeE7wNMv3Mu9pi8" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sunil-ghanchi-07b0471b5"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@sunilghanchi3154"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://x.com/sunil_ghanchi_"><span class="icon-twitter"></span></a></li>
-					  <!-- <li class="ftco-animate"><a href="https://facebook.com/sunilghanchi"><span class="icon-facebook"></span></a></li> -->
-				      <li class="ftco-animate"><a href="https://www.instagram.com/sunil.parihar14/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+        <article class="project reveal"><div class="project-top"><span class="project-id">05 / Edge AI · Computer vision</span><span class="project-state">Real-time inference</span></div><div class="project-layout"><div class="project-copy"><h3>Vision at the Edge</h3><p>Optimized object detection and face recognition for constrained hardware, and built live surveillance workflows across multi-camera RTSP streams.</p><dl><div><dt>System</dt><dd>Face embeddings, people tracking, weapon detection, alert generation, and on-device model execution.</dd></div><div><dt>Ownership</dt><dd>RTSP integration, real-time monitoring, TensorFlow Lite optimization, and RK3566 NPU deployment.</dd></div></dl><div class="tags"><span>OpenCV</span><span>YOLO</span><span>TensorFlow Lite</span><span>RTSP</span><span>RK3566 NPU</span></div></div><figure class="project-image"><img src="images/project-edge-ai.webp" alt="Embedded edge device running computer vision across multiple camera feeds" width="1536" height="1024" loading="lazy"></figure></div></article>
+      </div>
+      <details class="more-work reveal"><summary><span>More product systems</span><b>Expand archive <i>+</i></b></summary><div class="archive-grid"><article><span>E-commerce</span><h3>Product Classification ML</h3><p>Multi-label categorization with confidence-based predictions, human review, inference APIs, and a retraining pipeline.</p><div class="tags"><span>PyTorch</span><span>Hugging Face</span><span>FastAPI</span><span>MLflow</span></div></article><article><span>Fashion technology</span><h3>Fashion Companion AI</h3><p>Wardrobe intelligence using authentication, purchase-history analysis, categorization, and personalized recommendations.</p><div class="tags"><span>Django</span><span>Google OAuth</span><span>Gmail API</span><span>LLMs</span></div></article><article><span>Speech intelligence</span><h3>Whisper Audio Pipelines</h3><p>Server-side transcription with speaker diarization, identification, and word- and sentence-level timestamps.</p><div class="tags"><span>Whisper</span><span>STT</span><span>Python</span></div></article><article><span>AI fitness</span><h3>Dance Analysis AI</h3><p>Backend services for performance analysis, recommendations, AI avatars, speech services, and payments.</p><div class="tags"><span>Django</span><span>Computer Vision</span><span>STT / TTS</span></div></article></div></details>
+    </section>
 
+    <section class="experience section-shell" id="experience" aria-labelledby="experience-title"><div class="section-heading reveal"><p class="section-index">03 / Experience</p><h2 id="experience-title">Increasing<br><em>ownership.</em></h2><p>A career built around taking larger parts of the product and engineering lifecycle into my hands.</p></div><div class="timeline"><article class="timeline-item current reveal"><div class="time-marker"><i></i><span>Now</span></div><div class="time-period">May 2026 — Present</div><div class="time-role"><span>ViitorCloud Technologies</span><h3>Software Engineer — AI/ML</h3></div><p>Building agentic AI orchestration, enterprise RAG and document intelligence, financial due diligence workflows, and the backend infrastructure that supports long-running AI execution.</p></article><article class="timeline-item reveal"><div class="time-marker"><i></i></div><div class="time-period">Nov 2025 — Apr 2026</div><div class="time-role"><span>Linearloop Pvt Ltd</span><h3>AI/ML Engineer — L2</h3><b>Promoted to L2</b></div><p>Led AI projects from requirements and system architecture through development, deployment, production support, and mentoring—across surveillance and fashion technology.</p></article><article class="timeline-item reveal"><div class="time-marker"><i></i></div><div class="time-period">May 2024 — Oct 2025</div><div class="time-role"><span>BetterBugs / Linearloop</span><h3>Founding AI/ML Engineer</h3></div><p>Built production AI backend services, intelligent developer tooling, MCP and OAuth integrations, vector workflows, and deployed speech intelligence pipelines.</p></article></div></section>
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a>Sunil Ghanchi</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+    <section class="stack section-shell" id="stack" aria-labelledby="stack-title"><div class="section-heading horizontal reveal"><div><p class="section-index">04 / Technical stack</p><h2 id="stack-title">Tools chosen by<br><em>the problem.</em></h2></div><p>Strongest in Python and AI backend engineering, with broad experience across the systems needed to ship.</p></div><div class="stack-grid"><article class="reveal"><span>01</span><h3>AI Systems</h3><p>LLMs · Agentic AI · RAG · LangGraph · LangChain · MCP · Prompt Engineering · Embeddings · Vector Search · Tool Calling</p></article><article class="reveal"><span>02</span><h3>Backend</h3><p>Python · FastAPI · Django · REST APIs · SQLAlchemy · Celery · PostgreSQL · MySQL · MongoDB</p></article><article class="reveal"><span>03</span><h3>Data & Infrastructure</h3><p>Qdrant · ChromaDB · Pinecone · Redis / Valkey · MinIO · Docker · Asynchronous Processing</p></article><article class="reveal"><span>04</span><h3>Applied AI</h3><p>TensorFlow · Keras · Scikit-learn · PyTorch · Hugging Face · YOLO · Whisper · OpenCV · OCR</p></article><article class="reveal"><span>05</span><h3>Cloud & Delivery</h3><p>AWS · Azure · GCP · GitHub Actions · CI/CD · Linux · Git · MLflow</p></article><article class="reveal"><span>06</span><h3>Product & Automation</h3><p>JavaScript · SQL · C++ · Java · Angular · Vue.js · n8n · Google APIs · Slack API</p></article></div></section>
 
+    <section class="about section-shell" id="about" aria-labelledby="about-title"><div class="about-grid"><div class="section-heading reveal"><p class="section-index">05 / About</p><h2 id="about-title">Builder at the<br><em>full system</em> level.</h2></div><div class="about-copy reveal"><p>I’m an AI and product engineer who enjoys turning ambiguous problems into working systems. My best work happens where models meet backend logic, product constraints, and production infrastructure.</p><p>I care about understandable architecture, reliable execution, and building the review and failure paths that make AI genuinely useful—not just impressive in a demo.</p><div class="facts"><div><span>Based in</span><strong>Ahmedabad, India</strong></div><div><span>Education</span><strong>B.E. Computer Engineering<br>SAL College · 2020–2024</strong></div></div><div class="awards"><p>Awards at Linearloop</p><span>Above & Beyond · Jan 2025</span><span>Jugaad King · Jun 2024</span></div></div></div></section>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-title"><p class="section-index reveal">06 / Contact</p><div class="contact-layout"><div class="reveal"><h2 id="contact-title">Have an AI product<br>that needs to <em>ship?</em></h2><a class="email-link" href="mailto:sunilghanchi24@gmail.com">sunilghanchi24@gmail.com <span>↗</span></a></div><div class="contact-links reveal"><a href="https://github.com/sunilghanchi" target="_blank" rel="noreferrer"><span>GitHub</span><b>Code & experiments</b><i>↗</i></a><a href="https://www.linkedin.com/in/sunil-ghanchi/" target="_blank" rel="noreferrer"><span>LinkedIn</span><b>Experience & updates</b><i>↗</i></a><a href="mailto:sunilghanchi24@gmail.com?subject=Resume%20request"><span>Résumé</span><b>Request the latest copy</b><i>↗</i></a></div></div></section>
+  </main>
+  <footer class="site-footer section-shell"><span>© <span id="year"></span> Sunil Ghanchi</span><p>Designed around systems, built for the web.</p><a href="#top">Back to top ↑</a></footer>
+  <script type="module" src="js/main.js"></script>
+</body>
 </html>
